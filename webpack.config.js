@@ -5,7 +5,7 @@ var WebpackBrowserPlugin = require('webpack-browser-plugin');
 
 module.exports = {
     entry: {
-        app: './src/app/app.js',
+        app: './src/app/app.ts',
     },
 
     output: {
@@ -14,7 +14,11 @@ module.exports = {
         filename: '[name].bundle.js',
     },
 
-    resolve: ['.', '.js'],
+    resolve: {
+        extensions: ['', '.js', '.ts'],
+    },
+
+    devtool: 'source-map',
 
     devServer: {
         historyApiFallback: true,
@@ -24,7 +28,14 @@ module.exports = {
 
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style-loader!css-loader" },
+            {
+                test: /\.ts$/,
+                loader: 'awesome-typescript-loader',
+            },
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader",
+            },
         ]
     },
 
