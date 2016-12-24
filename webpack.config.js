@@ -1,11 +1,13 @@
+var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var WebpackNotifierPlugin = require('webpack-notifier');
-var WebpackBrowserPlugin = require('webpack-browser-plugin');
 
 module.exports = {
     entry: {
-        app: './src/app/app.ts',
+        polyfills: './src/polyfills.ts',
+        vendor: './src/vendor.ts',
+        app: './src/main.ts',
     },
 
     output: {
@@ -18,7 +20,7 @@ module.exports = {
         extensions: ['', '.js', '.ts'],
     },
 
-    devtool: 'source-map',
+    devtool: 'cheap-module-source-map',
 
     devServer: {
         historyApiFallback: true,
@@ -30,11 +32,21 @@ module.exports = {
         loaders: [
             {
                 test: /\.ts$/,
-                loader: 'awesome-typescript-loader',
+                loaders: ['awesome-typescript', 'angular2-template'],
             },
             {
-                test: /\.css$/,
-                loader: "style-loader!css-loader",
+                test: /\.scss$/,
+                exclude: [path.join(__dirname, 'src/app')],
+                loaders: ['style', 'css', 'sass'],
+            },
+            {
+                test: /\.scss$/,
+                include: [path.join(__dirname, 'src/app')],
+                loaders: ["raw", "sass"], 
+            },
+            {
+                test: /\.html$/,
+                loader: 'html'
             },
         ]
     },
@@ -45,6 +57,9 @@ module.exports = {
         }),
 
         new WebpackNotifierPlugin(),
-        new WebpackBrowserPlugin()
+
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['app', 'vendor', 'polyfills'],
+        }),
     ]
 }
