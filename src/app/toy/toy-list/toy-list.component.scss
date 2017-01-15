@@ -1,0 +1,27 @@
+@import '../../../assets/styles/colors.scss';
+
+.toy-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.toy {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $gray-dark;
+    margin: 30px 10px;
+}
+
+.preview {
+    width: 200px;
+    height: 200px;
+    background-color: $white;
+}
+
+.description {
+    padding: 20px;
+    text-align: center;
+    background-color: $white;
+    border-top: 1px solid $gray-dark;
+}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import '../assets/style.scss';
+import '../assets/styles/style.scss';
 
 @Component({
     selector: 'toy-app',
