@@ -27,6 +27,11 @@ module.exports = {
         stats: 'minimal',
         compress: true,
         port: 3000,
+        proxy: {
+            '*': {
+                target: 'http://localhost:3001',
+            },
+        },
     },
 
     module: {
@@ -43,7 +48,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 include: [path.join(__dirname, 'src/app')],
-                use: ["raw-loader", "sass-loader"], 
+                use: ['raw-loader', 'sass-loader'], 
             },
             {
                 test: /\.html$/,
