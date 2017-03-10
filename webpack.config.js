@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -43,7 +44,10 @@ module.exports = {
             {
                 test: /\.scss$/,
                 exclude: [path.join(__dirname, 'src/app')],
-                use: ['style-loader', 'css-loader', 'sass-loader'],
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'sass-loader'],
+                }),
             },
             {
                 test: /\.scss$/,
@@ -76,5 +80,7 @@ module.exports = {
             /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
             path.resolve(__dirname, 'doesnotexist/')
         ),
+
+        new ExtractTextPlugin("style.css"),
     ]
 }
