@@ -1,20 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 
 import { Toy } from './toy';
 
 @Injectable()
 export class ToyService {
-    getToys() {
-        return this.mockToys();
-    }
+    constructor(private http: Http){}
 
-    private mockToys() {
-        return Array.from(Array(30)).map((element, index) => {
-            let toy = new Toy();
-            toy.title = `Toy number A${index}`;
-            toy.price = Math.random() * 1000;
-            
-            return toy;
-        });
+    getToys(): Promise<Toy[]> {
+        return this.http.get('/toys/all')
+            .toPromise()
+            .then(response => {
+                return response.json() as Toy[];
+            });
     }
 }

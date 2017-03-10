@@ -15,6 +15,8 @@ export class ToyListComponent implements OnInit {
     constructor(private toyService: ToyService) {}
 
     ngOnInit() {
-        this.toys = this.toyService.getToys();
+        this.toyService.getToys().then(toys => {
+            this.toys = toys;
+        });
     }
 }
