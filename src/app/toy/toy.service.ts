@@ -5,13 +5,11 @@ import { Toy } from './toy';
 
 @Injectable()
 export class ToyService {
-    constructor(private http: Http){}
+    constructor(private http: Http) {}
 
     getToys(): Promise<Toy[]> {
         return this.http.get('/toys/all')
             .toPromise()
-            .then(response => {
-                return response.json() as Toy[];
-            });
+            .then(response => response.json() as Toy[]);
     }
 }
