@@ -1,6 +1,6 @@
 @import "~normalize.css";
+@import "../fonts/fonts.scss";
 
 body {
-    padding: 50px;
-    background-image: url('../images/background.png');
+    font-family: $nunito-sans;
 }

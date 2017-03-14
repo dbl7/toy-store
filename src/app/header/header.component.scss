@@ -1,0 +1,45 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/styles/colors.scss";
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 30px;
+    background: linear-gradient(to right, rgba(38, 165, 255, 0) 0%, rgb(38, 165, 255) 20%, hsl(205, 100%, 57%) 80%, rgba(38, 165, 255, 0) 100%);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}
+
+.logo {
+    font-family: $chalkduster;
+    color: $white;
+    font-size: 32px;
+}
+
+.menu {
+    display: flex;
+}
+
+.icon {
+    background-size: 26px;
+    width: 26px;
+    height: 26px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.search {
+    background-image: url('../../assets/images/search.svg');
+}
+
+.wishlist {
+    background-image: url('../../assets/images/wishlist.svg');
+}
+
+.shopping-cart {
+    background-image: url('../../assets/images/shopping-cart.svg');
+}
