@@ -1,0 +1,65 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/styles/colors.scss";
+
+.main-page {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    position: relative;
+    top: -30px;
+    background-color: $white;
+    border-radius: 10px;
+    display: flex;
+}
+
+h3,
+h5 {
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 20px;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-family: $chalkduster;
+    color: $buttercup;
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+.filter {
+    padding: 30px;
+}
+
+.filter-gender {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    padding-bottom: 30px;
+    
+    label {
+        cursor: pointer;
+    }
+
+    input {
+        margin-right: 5px;
+    }
+}
+
+.filter-age {
+    padding-bottom: 20px;
+
+    select {
+        width: 100%;
+    }
+}
+
+.popular-toys {
+    width: 715px;
+    padding: 30px 20px;
+}

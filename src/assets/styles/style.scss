@@ -1,6 +1,14 @@
 @import "~normalize.css";
 @import "../fonts/fonts.scss";
+@import "./components/button.scss";
 
-body {
+body,
+button,
+select {
     font-family: $nunito-sans;
+}
+
+.hero-image {
+    height: 660px;
+    background-image: url('../images/background.png');
 }
