@@ -26,7 +26,7 @@
             "property-declaration": "nospace",
             "variable-declaration": "nospace"
         }],
-        "variable-name": [true, "ban-keywords", "check-format"],
+        "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
         "whitespace": [true,
             "check-branch",
             "check-decl",

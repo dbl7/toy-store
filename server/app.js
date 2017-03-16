@@ -5,7 +5,7 @@ const db = require('./db.js');
 
 const toys = require('./controllers/toys');
 
-app.use('/toys', toys);
+app.use('/api/toys', toys);
 
 db.connect('mongodb://127.0.0.1:27017/toy-store', error => {
     if (error) {
