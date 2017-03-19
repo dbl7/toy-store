@@ -8,7 +8,7 @@ export class ToyService {
     constructor(private http: Http) {}
 
     getToys(): Promise<Toy[]> {
-        return this.http.get('/toys/all')
+        return this.http.get('/api/toys/all')
             .toPromise()
             .then(response => response.json() as Toy[]);
     }
