@@ -19,7 +19,7 @@
     cursor: pointer;
 
     &:hover {
-        .submenu {
+        .submenus {
             left: auto;
             top: 78px;
             opacity: 1;
@@ -35,7 +35,7 @@
     }
 }
 
-.submenu {
+.submenus {
     position: absolute;
     left: -9999px;
     top: 70px;
@@ -69,6 +69,8 @@
             background: $white;
             transition: all .35s ease;
             text-transform: capitalize;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         &:hover a {

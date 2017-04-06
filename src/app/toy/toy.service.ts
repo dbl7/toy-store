@@ -7,8 +7,8 @@ import { Toy } from './toy';
 export class ToyService {
     constructor(private http: Http) {}
 
-    getToys(): Promise<Toy[]> {
-        return this.http.get('/api/toys/all')
+    getToys(category: string, categoryType: string): Promise<Toy[]> {
+        return this.http.get(`/api/toys?category=${category}&categoryType=${categoryType}`)
             .toPromise()
             .then(response => response.json() as Toy[]);
     }

@@ -1,35 +1,8 @@
 <ul class="navigation">
-    <li class="menu">
-        <a>Toys</a>
-        <ul class="submenu">
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-        </ul>
-    </li>
-    <li class="menu">
-        <a>Outdoors</a>
-        <ul class="submenu">
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-        </ul>
-    </li>
-    <li class="menu">
-        <a>Nursery</a>
-        <ul class="submenu">
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-            <li><a>link</a></li>
-            <li><a>link</a></li>
+    <li *ngFor="let menu of menus" class="menu">
+        <a>{{menu.name}}</a>
+        <ul class="submenus">
+            <li *ngFor="let submenu of menu.submenus"><a routerLink="/{{menu.name}}/{{submenu}}">{{submenu}}</a></li>
         </ul>
     </li>
 </ul>

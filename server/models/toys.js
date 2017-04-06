@@ -1,6 +1,6 @@
 const db = require('../db');
 
-exports.all = done => {
+exports.all = ({ category, categoryType }, done) => {
     const toys = db.get().collection('toys');
-    toys.find().toArray(done);
+    toys.find({ category, categoryType }).toArray(done);
 }
