@@ -9,7 +9,7 @@ header {
     display: flex;
     justify-content: center;
     padding: 40px 0 30px;
-    background: linear-gradient(to right, rgba(38, 165, 255, 0) 0%, rgb(38, 165, 255) 20%, hsl(205, 100%, 57%) 80%, rgba(38, 165, 255, 0) 100%);
+    background: $dodger-blue;
 }
 
 .content {
@@ -22,6 +22,7 @@ header {
     font-family: $chalkduster;
     color: $white;
     font-size: 32px;
+    text-transform: uppercase;
 }
 
 .menu {
@@ -46,4 +47,9 @@ header {
 
 .shopping-cart {
     background-image: url('../../assets/images/shopping-cart.svg');
+}
+
+navigation {
+    position: absolute;
+    top: 106px;
 }

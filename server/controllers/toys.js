@@ -2,8 +2,10 @@ const router = require('express').Router();
 
 const Toys = require('../models/toys');
 
-router.get('/all', (req, res) => {
-    Toys.all((err, toys) => {
+router.get('/', (req, res) => {
+    const { category, categoryType } = req.query;
+    
+    Toys.all({ category, categoryType }, (err, toys) => {
         res.json(toys);
     });
 });

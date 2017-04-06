@@ -1,0 +1,80 @@
+@import "../../../assets/fonts/fonts.scss";
+@import "../../../assets/styles/colors.scss";
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    padding: 0 30px;
+    margin: 0;
+    background: linear-gradient(to right, rgba(38, 165, 255, 0) 0%, rgb(38, 165, 255) 20%, hsl(205, 100%, 57%) 80%, rgba(38, 165, 255, 0) 100%);
+    list-style-type: none;
+}
+
+.menu {
+    position: relative;
+    font-family: $chalkduster;
+    color: $white;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        .submenus {
+            left: auto;
+            top: 78px;
+            opacity: 1;
+            padding: 10px 20px;
+            background-color: $white;
+            border-radius: 6px;
+        }
+    }
+
+    a {
+        display: inline-block;
+        padding: 30px 20px;
+    }
+}
+
+.submenus {
+    position: absolute;
+    left: -9999px;
+    top: 70px;
+    opacity: 0;
+    transition: opacity .3s ease, top .25s ease;
+    z-index: 1000;
+    list-style-type: none;
+    font-family: $nunito-sans;
+
+    &:after {
+        content: '';
+        border: 6px solid transparent;
+        width: 0;
+        height: 0;
+        border-bottom-color: $white;
+        position: absolute;
+        top: -12px;
+        left: 30px;
+    }
+
+    li {
+        position: relative;
+
+        a {
+            display: block;
+            width: 100px;
+            padding: 10px 0;
+            font-size: 14px;
+            line-height: 18px;
+            color: $tandora;
+            background: $white;
+            transition: all .35s ease;
+            text-transform: capitalize;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        &:hover a {
+            color: $buttercup;
+        }
+    }
+}
