@@ -3,12 +3,20 @@
 
 .main-page {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-image {
+    background-image: url('../../assets/images/aliens.png');
+    background-repeat: no-repeat;
+    width: 595px;
+	height: 365px;
 }
 
 .content {
     position: relative;
-    top: -30px;
+    top: 245px;
     background-color: $white;
     border-radius: 10px;
     display: flex;

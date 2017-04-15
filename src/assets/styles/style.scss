@@ -6,9 +6,10 @@ body,
 button,
 select {
     font-family: $nunito-sans;
+    background-image: url('../images/background.png');
+    background-repeat: repeat-x;
 }
 
-.hero-image {
-    height: 660px;
-    background-image: url('../images/background.png');
+main {
+    margin-top: 150px;
 }
