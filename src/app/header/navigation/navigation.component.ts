@@ -7,30 +7,33 @@ import { Component } from '@angular/core';
 })
 export class NavigationComponent {
     menus = [{
-        name: 'toys',
+        title: 'toys',
+        url: 'toys',
         submenus: [
-            'atrs and crafts',
-            'dolls',
-            'ellectronics toys',
-            'puzzles',
-            'books',
+            { title: 'atrs and crafts', url: 'atrs-and-crafts' },
+            { title: 'dolls', url: 'dolls' },
+            { title: 'ellectronics toys', url: 'ellectronics-toys' },
+            { title: 'puzzles', url: 'puzzles' },
+            { title: 'books', url: 'books' },
         ],
     }, {
-        name: 'outdoors',
+        title: 'outdoors',
+        url: 'outdoors',
         submenus: [
-            'backpaks',
-            'beach toys',
-            'bicycles',
-            'playhouses',
-            'water guns',
+            { title: 'backpaks', url: 'backpaks' },
+            { title: 'beach toys', url: 'beach-toys' },
+            { title: 'bicycles', url: 'bicycles' },
+            { title: 'playhouses', url: 'playhouses' },
+            { title: 'water guns', url: 'water-guns' },
         ],
     }, {
-        name: 'nursery',
+        title: 'nursery',
+        url: 'nursery',
         submenus: [
-            'nursery accessories',
-            'cutlery sets',
-            'feeding bottle',
-            'gift sets',
+            { title: 'nursery accessories', url: 'nursery-accessories' },
+            { title: 'cutlery sets', url: 'cutlery-sets' },
+            { title: 'feeding bottle', url: 'feeding-bottle' },
+            { title: 'gift sets', url: 'gift-sets' },
         ],
     }];
 }

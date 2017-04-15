@@ -1,8 +1,8 @@
 <ul class="navigation">
     <li *ngFor="let menu of menus" class="menu">
-        <a>{{menu.name}}</a>
+        <a>{{menu.title}}</a>
         <ul class="submenus">
-            <li *ngFor="let submenu of menu.submenus"><a routerLink="/{{menu.name}}/{{submenu}}">{{submenu}}</a></li>
+            <li *ngFor="let submenu of menu.submenus"><a routerLink="/{{menu.url}}/{{submenu.url }}">{{submenu.title}}</a></li>
         </ul>
     </li>
 </ul>

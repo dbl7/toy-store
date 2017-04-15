@@ -6,15 +6,16 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    height: 100px;
     display: flex;
     justify-content: center;
-    padding: 40px 0 30px;
     background: $dodger-blue;
 }
 
 .content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 1000px;
 }
 
@@ -48,9 +49,4 @@ header {
 
 .shopping-cart {
     background-image: url('../../assets/images/shopping-cart.svg');
-}
-
-navigation {
-    position: absolute;
-    top: 106px;
 }
