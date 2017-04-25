@@ -1,0 +1,12 @@
+@import "../../../assets/styles/colors.scss";
+
+.toy-dashboard {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 1000px;
+    border-radius: 10px;
+    background-color: $white;
+}
