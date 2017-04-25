@@ -2,8 +2,11 @@
     <div *ngFor="let toy of toys" class="toy">
         <div class="preview"></div>
         <div class="description">
-            <div>{{toy.title}}</div>
-            <div>{{toy.price | currency:'USD':true}}</div>
+            <div class="title" title={{toy.title}}>{{toy.title}}</div>
+            <div class="price">{{toy.price | currency:'USD':true}}</div>
         </div>
     </div>
+
+    <span *ngIf="toys && toys.length === 0" class="no-toys">Unfortunately currently there is no toys in this category</span>
+    <div *ngIf="!toys" class="loading"></div>
 </div>

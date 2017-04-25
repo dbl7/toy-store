@@ -10,13 +10,13 @@
 .hero-image {
     background-image: url('../../assets/images/aliens.png');
     background-repeat: no-repeat;
-    width: 595px;
-	height: 365px;
+    width: 714px;
+	height: 410px;
 }
 
 .content {
     position: relative;
-    top: 245px;
+    top: 20px;
     background-color: $white;
     border-radius: 10px;
     display: flex;
@@ -68,6 +68,6 @@ h5 {
 }
 
 .popular-toys {
-    width: 715px;
-    padding: 30px 20px;
+    width: 760px;
+    padding: 30px 0;
 }

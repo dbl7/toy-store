@@ -1,27 +1,62 @@
-@import '../../../assets/styles/colors.scss';
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/fonts/fonts.scss";
 
 .toy-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    min-height: 300px;
 }
 
 .toy {
     display: flex;
     flex-direction: column;
-    border: 1px solid $gray-dark;
+    width: 223px;
+    border: 1px solid $gray-light;
     margin: 30px 10px;
+    background-color: $white;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    }
 }
 
 .preview {
-    width: 200px;
-    height: 200px;
-    background-color: $white;
+    width: 223px;
+    height: 223px;
+    background-image: url('../../../assets/images/preview.jpg');
 }
 
 .description {
     padding: 20px;
     text-align: center;
-    background-color: $white;
-    border-top: 1px solid $gray-dark;
+}
+
+.title {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price {
+    font-family: $chalkduster;
+    font-size: 24px;
+    color: $buttercup;
+}
+
+.no-toys {
+    text-transform: uppercase;
+    align-self: center;
+    color: $gray-dark;
+    font-size: 20px;
+}
+
+.loading {
+    background-image: url("../../../assets/images/loading.gif");
+    width: 180px;
+    height: 135px;
+    background-size: cover;
+    align-self: center;
 }

@@ -10,4 +10,10 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/popular', (req, res) => {
+    Toys.popular((err, toys) => {
+        res.json(toys);
+    });
+});
+
 module.exports = router;

@@ -12,4 +12,10 @@ export class ToyService {
             .toPromise()
             .then(response => response.json() as Toy[]);
     }
+
+    popularToys(): Promise<Toy[]> {
+        return this.http.get('/api/toys/popular')
+            .toPromise()
+            .then(response => response.json() as Toy[]);
+    }
 }
