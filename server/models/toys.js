@@ -1,3 +1,5 @@
+const { ObjectId } = require('mongodb');
+
 const db = require('../db');
 
 exports.all = ({ category, categoryType }, done) => {
@@ -9,5 +11,10 @@ exports.all = ({ category, categoryType }, done) => {
 exports.popular = (done) => {
     const toys = db.get().collection('toys');
 
-    toys.find({ orders: 500 }).limit(6).toArray(done);
+    toys.find({ orders: { $gt: 700 } }).limit(6).toArray(done);
+};
+
+exports.get = (id, done) => {
+    const toys = db.get().collection('toys');
+    toys.findOne({ _id: ObjectId(id) }).then(done);
 };

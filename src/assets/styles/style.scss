@@ -6,6 +6,9 @@ body,
 button,
 select {
     font-family: $nunito-sans;
+}
+
+body {
     background-image: url('../images/background.png');
     background-repeat: repeat-x;
 }

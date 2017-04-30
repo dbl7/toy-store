@@ -1,0 +1,19 @@
+<div class="toy-detail-wrapper">
+    <div class="toy-detail">
+        <img class="preview" src="../../../assets/images/preview.jpg">
+        <div class="toy-profile">
+            <div class="title">{{toy?.title}}</div>
+            <div class="price">{{toy?.price | currency:'USD':true}}</div>
+            <button class="add-to-cart">Add to cart</button>
+            <div class="toy-information">
+                <span [className]="activeTab === 'description' ? 'active' : ''"
+                    (click)="activeTab = 'description'"
+                >Description</span>
+                <span [className]="activeTab === 'materials' ? 'active' : ''"
+                    (click)="activeTab = 'materials'"
+                >Materials</span>
+            </div>
+            <div class="description">{{toy?.description}}</div>
+        </div>
+    </div>
+</div>

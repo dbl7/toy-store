@@ -1,5 +1,5 @@
 <div class="toy-list">
-    <div *ngFor="let toy of toys" class="toy">
+    <div *ngFor="let toy of toys" class="toy" (click)="goto(toy)">
         <div class="preview"></div>
         <div class="description">
             <div class="title" title={{toy.title}}>{{toy.title}}</div>

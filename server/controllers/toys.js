@@ -16,4 +16,10 @@ router.get('/popular', (req, res) => {
     });
 });
 
+router.get('/:id', (req, res) => {
+    Toys.get(req.params.id, (toy) => {
+        res.json(toy);
+    });
+});
+
 module.exports = router;

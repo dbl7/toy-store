@@ -18,4 +18,10 @@ export class ToyService {
             .toPromise()
             .then(response => response.json() as Toy[]);
     }
+
+    getToy(id: string): Promise<Toy> {
+        return this.http.get(`/api/toys/${id}`)
+            .toPromise()
+            .then(toy => toy.json() as Toy);
+    }
 }

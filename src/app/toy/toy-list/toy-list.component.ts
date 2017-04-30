@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+import { Router } from '@angular/router';
+
 import { Toy } from '../toy';
 import { ToyService } from '../toy.service';
 
@@ -10,4 +12,10 @@ import { ToyService } from '../toy.service';
 })
 export class ToyListComponent {
     @Input() toys: Toy[];
+
+    constructor(private router: Router) {}
+
+    goto(toy: Toy) {
+        this.router.navigate([`/${toy.category}/${toy.categoryType}/${toy._id}`]);
+    }
 }

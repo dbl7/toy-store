@@ -1,0 +1,68 @@
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/fonts/fonts.scss";
+
+.toy-detail-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.toy-detail {
+    display: flex;
+    width: 1000px;
+    min-height: 500px;
+    padding: 30px 20px;
+    background-color: $white;
+    border-radius: 10px;
+}
+
+.preview {
+    width: 380px;
+    height: 380px;
+    flex-shrink: 0;
+}
+
+.toy-profile {
+    flex-grow: 1;
+    padding-top: 30px;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.price {
+    font-family: $chalkduster;
+    font-size: 32px;
+    margin-top: 24px;
+    color: $buttercup;
+}
+
+.add-to-cart {
+    margin-top: 38px;
+    text-transform: uppercase;
+}
+
+.toy-information {
+    margin-top: 60px;
+    border-bottom: 3px solid $tandora;
+
+    span {
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 21px;
+        cursor: pointer;
+
+        &.active {
+            color: $buttercup;
+            border-bottom: 3px solid $buttercup;
+        }
+
+        &:last-child {
+            margin-left: 40px;
+        }
+    }
+}
+
+.description {
+    margin-top: 20px;
+}
