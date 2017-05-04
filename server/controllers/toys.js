@@ -22,4 +22,10 @@ router.get('/:id', (req, res) => {
     });
 });
 
+router.get('/:id/add-to-bag', (req, res) => {
+    Toys.addToBag(req.params.id, (toy) => {
+        res.json(toy.value);
+    });
+});
+
 module.exports = router;

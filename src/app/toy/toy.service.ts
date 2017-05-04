@@ -24,4 +24,8 @@ export class ToyService {
             .toPromise()
             .then(toy => toy.json() as Toy);
     }
+
+    addToBag(id: string) {
+        return this.http.get(`/api/toys/${id}/add-to-bag`).toPromise();
+    }
 }

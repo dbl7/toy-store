@@ -7,4 +7,5 @@ export class Toy {
     description: string;
     category: string;
     categoryType: string;
+    inBag: boolean;
 }

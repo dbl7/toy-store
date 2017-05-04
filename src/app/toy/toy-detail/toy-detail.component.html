@@ -4,7 +4,7 @@
         <div class="toy-profile">
             <div class="title">{{toy?.title}}</div>
             <div class="price">{{toy?.price | currency:'USD':true}}</div>
-            <button class="add-to-cart">Add to cart</button>
+            <button class="add-to-bag" (click)="addToBag()" [disabled]="adding">Add to bag</button>
             <div class="toy-information">
                 <span [className]="activeTab === 'description' ? 'active' : ''"
                     (click)="activeTab = 'description'"

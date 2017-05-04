@@ -10,6 +10,7 @@ import { ToyService } from '../toy.service';
 })
 export class ToyDetailComponent implements OnInit {
     toy: Toy;
+    adding = false;
     activeTab: string = 'description';
 
     constructor(
@@ -23,5 +24,14 @@ export class ToyDetailComponent implements OnInit {
         this.toyService.getToy(id).then((toy: Toy) => {
             this.toy = toy;
         });
+    }
+
+    addToBag() {
+        this.adding = true;
+        this.toyService.addToBag(this.toy._id)
+            .then(() => {
+                this.toy.inBag = true;
+                this.adding = false;
+            });
     }
 }

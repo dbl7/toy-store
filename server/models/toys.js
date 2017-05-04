@@ -18,3 +18,12 @@ exports.get = (id, done) => {
     const toys = db.get().collection('toys');
     toys.findOne({ _id: ObjectId(id) }).then(done);
 };
+
+exports.addToBag = (id, done) => {
+    const toys = db.get().collection('toys');
+    toys.findOneAndUpdate(
+        { _id: ObjectId(id) },
+        { $set: { inBag: true } },
+        { returnNewDocument: true }
+    ).then(done);
+};
